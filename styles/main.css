@@ -356,3 +356,76 @@ footer {
     margin-top: 30px;
     padding: 20px 0;
 }
+
+/* book page */
+.book-name {
+    color: #004242;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #20B2AA;
+}
+.book {
+    padding: 20px 0;
+    display: flex;
+    column-gap: 60px;
+}
+.book span img {
+    width: 180px;
+}
+.read-down li {
+    list-style: none;
+    cursor: default;
+    color: #C7E1BC;
+    text-align: center;
+    font-weight: bold;
+    background-color: #20B2AA;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+.read-down li:hover {
+    color: #FFF;
+    background-color: #536872;
+}
+.book-info {
+    list-style: none;
+    color: #536872;
+}
+.book-info li {
+    margin-bottom: 10px;
+}
+.book-info li i {
+    color: #20B2AA;
+    font-weight: bold;
+    margin-right: 5px;
+}
+.book-qr {
+    width: 300px;
+}
+.book-qr p {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.book-qr i {
+    margin-top: -5px;
+    font-size: 100px;
+}
+
+/* kutubxona  */
+
+.file-list li {
+    list-style: none;
+    padding: 12px 10px;
+    font-size: 17px;
+    color: #536872;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+.file-list li:hover {
+    cursor: pointer;
+    background-color: #CCC;
+}
