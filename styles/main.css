@@ -72,7 +72,26 @@ header {
     position: relative;
 }
 .list a {
+    position: relative;
     color: #333;
+}
+.list a::after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    border-radius: 1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #20B2AA;
+    transition: 1000ms;
+}
+.before-a::after {
+    transition: 1000ms;
+    width: 100%!important;
+}
+.home a::after {
+    background-color: #FFF!important;
 }
 .list a:hover {
     transition: 500ms;
@@ -93,6 +112,25 @@ header {
     align-items: center;
     position: relative;
 }
+.lang li:hover {
+    cursor: default;
+}
+.search-box {
+    position: relative;
+}
+.search-box i {
+    font-size: 20px;
+    cursor: pointer;
+}
+.search-box input {
+    padding: 5px 7px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    right: -7px;
+    z-index: -1;
+    display: none;
+    position: absolute;
+}
 .lang li i {
     font-size: 12px;
     margin-left: 5px;
@@ -102,28 +140,30 @@ header {
     width: 17px;
 }
 .langs {
-    background-color: #CCC;
-    bottom: -60px;
+    box-shadow: 0 0 2px #CCC;
+    background-color: #FFF;
+    bottom: -55px;
+    left: 0;
     cursor: default;
     z-index: 1;
     display: none;
     width: 140%;
     border-radius: 3px;
-    padding: 5px 10px;
+    padding: 7px 10px;
     position: absolute;
 }
 .langs p {
     display: flex;
     align-items: center;
-}
-.langs p:hover {
-    
+    cursor: pointer;
+    font-size: 14px;
 }
 .langs p:first-child {
-    padding-bottom: 5px;
-    margin-bottom: 5px;
+    padding-bottom: 7px;
+    margin-bottom: 7px;
     border-bottom: 1px dashed #333;
 }
+
 .name {
     position: relative;
     padding: 10px 20px;
@@ -173,15 +213,6 @@ h2 {
      margin-left: 5px;
      color: #20B2AA;
  }
- /* label::after {
-     content: "";
-     position: absolute;
-     width: 20px;
-     height: 90%;
-     top: 0;
-     right: -20px;
-     background-color: red;
- } */
  .books {
      padding: 50px 0;
      display: flex;
@@ -284,8 +315,8 @@ h2 {
     transition: 500ms;
     font-size: 34px;
 }
-/* Footer section */
 
+/* Footer section */
 footer {
     background-color: #004242;
     color: #FFF;
@@ -301,12 +332,17 @@ footer {
     margin-bottom: 25px;
     padding-bottom: 15px;
 }
+.h2-hover::after {
+    width: 60%!important;
+    transition: 2000ms;
+}
 .foot-blog h2::after {
     content: "";
     position: absolute;
     width: 30%;
     height: 3px;
     border-radius: 3px;
+    transition: 2000ms;
     background-color: #20B2AA;
     bottom: 0;
     left: 0;
@@ -317,7 +353,7 @@ footer {
     width: 60%;
     height: 3px;
     border-radius: 3px;
-    background-color: #8DA399;
+    background-color: #CCC;
     bottom: 0;
     left: 0;
 }
@@ -344,12 +380,6 @@ footer {
     justify-content: center;
     color: #004242;
     background-color: #FFF;
-}
-.foot-blog i:hover {
-    transition: 700ms;
-    background-color: #20B2AA;
-    color: #FFF;
-    margin-right: 20px;
 }
 .p-footer {
     border-top: 1px solid #20B2AA;
@@ -382,8 +412,10 @@ footer {
     background-color: #20B2AA;
     border-radius: 3px;
     padding: 10px 20px;
+    transition: 700ms;
 }
 .read-down li:hover {
+    transition: 700ms;
     color: #FFF;
     background-color: #536872;
 }
@@ -405,13 +437,18 @@ footer {
 .book-qr p {
     width: 100%;
     display: flex;
+    color: #536872;
+    transition: 700ms;
     justify-content: space-between;
 }
 .book-qr i {
     margin-top: -5px;
     font-size: 100px;
 }
-
+.book-qr i:hover {
+    transition: 700ms;
+    color: #333;
+}
 /* kutubxona  */
 
 .file-list li {
@@ -422,8 +459,7 @@ footer {
     display: flex;
     justify-content: space-between;
     border-radius: 3px;
-    font-family: Arial, Helvetica, sans-serif
-
+    font-family: Arial, Helvetica, sans-serif;
 }
 .file-list li:hover {
     cursor: pointer;
