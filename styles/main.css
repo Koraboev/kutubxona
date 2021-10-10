@@ -163,7 +163,6 @@ header {
     margin-bottom: 7px;
     border-bottom: 1px dashed #333;
 }
-
 .name {
     position: relative;
     padding: 10px 20px;
@@ -173,9 +172,20 @@ header {
     margin: 50px 140px;
     box-shadow: 0 0 3px #ccc;
 }
-h2 {
+.name h2 {
+    position: relative;
     text-align: center;
 }
+.name h2::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -22px;
+    height: 200%;
+    width: 50px;
+    background-color: #FFF;
+}
+/* main screen */
 .main {
     padding: 20px 140px;
     display: flex;
@@ -183,9 +193,16 @@ h2 {
 }
 .left {
     flex: 4;
+    position: relative;
 }
 .right {
     flex: 1;
+}
+.logo {
+    left: 0;
+    top: -20px;
+    position: absolute;
+    width: 90px;
 }
  section {
      margin: 10px 0;
@@ -455,7 +472,7 @@ footer {
     list-style: none;
     padding: 12px 10px;
     font-size: 17px;
-    color: #536872;
+    color: #016BC7;
     display: flex;
     justify-content: space-between;
     border-radius: 3px;
@@ -463,5 +480,5 @@ footer {
 }
 .file-list li:hover {
     cursor: pointer;
-    background-color: #CCC;
+    background-color: #EEE;
 }
